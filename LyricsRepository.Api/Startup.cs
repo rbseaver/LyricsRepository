@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using LyricsRepository.Core;
+using LyricsRepository.Core.Providers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace LyricsRepository.Api
 {
@@ -26,6 +21,9 @@ namespace LyricsRepository.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services
+                .AddScoped<IVersionService, VersionService>()
+                .AddScoped<IAssemblyProvider, AssemblyProvider>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

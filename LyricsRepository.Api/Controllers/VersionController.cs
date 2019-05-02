@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using System.Threading.Tasks;
+using LyricsRepository.Core;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LyricsRepository.Api.Controllers
@@ -11,11 +8,17 @@ namespace LyricsRepository.Api.Controllers
     [ApiController]
     public class VersionController : ControllerBase
     {
-        // GET: api/Version
-        [HttpGet]
-        public string Get()
+        private IVersionService versionService;
+
+        public VersionController(IVersionService versionService)
         {
-            return string.Empty;
+            this.versionService = versionService;
+        }
+
+        [HttpGet]
+        public async Task<string> Get()
+        {
+            return await versionService.GetVersionAsync<Startup>();
         }
     }
 }

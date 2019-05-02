@@ -1,10 +1,8 @@
-﻿using LyricsRepository.Api;
-using System;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 
 namespace LyricsRepository.Core
 {
-    public class VersionService
+    public class VersionService : IVersionService
     {
         private readonly IAssemblyProvider assemblyProvider;
 
