@@ -3,13 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsRepository.Api", "LyricsRepository.Api\LyricsRepository.Api.csproj", "{B477FE91-94A9-42FE-AA5B-CDDAD4822A22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsRepository.Api", "LyricsRepository.Api\LyricsRepository.Api.csproj", "{B477FE91-94A9-42FE-AA5B-CDDAD4822A22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsRepository.Tests.Unit", "LyricsRepository.Tests.Unit\LyricsRepository.Tests.Unit.csproj", "{F41852A2-06F9-4E8C-8D4F-536FC7EEB3EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsRepository.Tests.Unit", "LyricsRepository.Tests.Unit\LyricsRepository.Tests.Unit.csproj", "{F41852A2-06F9-4E8C-8D4F-536FC7EEB3EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsRepository.Core", "LyricsRepository.Core\LyricsRepository.Core.csproj", "{69DF728D-C24F-4531-8562-0B25459EA693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsRepository.Core", "LyricsRepository.Core\LyricsRepository.Core.csproj", "{69DF728D-C24F-4531-8562-0B25459EA693}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricsRepository.Tests.Integration", "LyricsRepository.Tests.Integration\LyricsRepository.Tests.Integration.csproj", "{1DDB973A-0DF9-4B45-9B4F-E9B4DE2464F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsRepository.Tests.Integration", "LyricsRepository.Tests.Integration\LyricsRepository.Tests.Integration.csproj", "{1DDB973A-0DF9-4B45-9B4F-E9B4DE2464F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{769BC7A1-A6AB-4EC4-980D-9EF46C8E406D}"
+	ProjectSection(SolutionItems) = preProject
+		.bettercodehub.yml = .bettercodehub.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{F2B43D6E-7666-4E8D-8147-63BBD8588C44}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,15 +1,15 @@
 ﻿using FluentAssertions;
 using LyricsRepository.Api;
 using LyricsRepository.Tests.Integration.TestHelper;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Threading.Tasks;
 
 namespace LyricsRepository.Tests.Integration.Api.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class VersionControllerTests
     {
-        [TestMethod]
+        [Test]
         public async Task ShouldGetVersion()
         {
             var expectedVersion = typeof(Startup).Assembly.GetName().Version.ToString();

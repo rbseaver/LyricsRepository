@@ -2,15 +2,15 @@
 using LyricsRepository.Api;
 using LyricsRepository.Core;
 using LyricsRepository.Core.Providers;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System.Threading.Tasks;
 
 namespace LyricsRepository.Tests.Unit.Core.Services
 {
-    [TestClass]
+    [TestFixture]
     public class VersionServiceTests
     {
-        [TestMethod]
+        [Test]
         public async Task ShouldRetrieveVersion()
         {
             var expected = typeof(Startup).Assembly.GetName().Version.ToString();

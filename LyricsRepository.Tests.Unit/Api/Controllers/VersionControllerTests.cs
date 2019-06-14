@@ -2,16 +2,16 @@
 using LyricsRepository.Api;
 using LyricsRepository.Api.Controllers;
 using LyricsRepository.Core;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using NUnit.Framework;
 using System.Threading.Tasks;
 
 namespace LyricsRepository.Tests.Unit.Api.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class VersionControllerTests
     {
-        [TestMethod]
+        [Test]
         public async Task ShouldReturnVersion()
         {
             var versionService = new Mock<IVersionService>();
