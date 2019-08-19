@@ -18,7 +18,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{76
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{F2B43D6E-7666-4E8D-8147-63BBD8588C44}"
 	ProjectSection(SolutionItems) = preProject
-		README.md = README.md
+		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
 Global
