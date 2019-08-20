@@ -15,12 +15,12 @@ namespace LyricsRepository.Tests.Integration.Api.Controllers
             var expectedVersion = typeof(Startup).Assembly.GetName().Version.ToString();
 
             using (var client = TestClient.CreateClient())
+            using (var response = await client.GetAsync("/api/version"))
             {
-                var response = await client.GetAsync("/api/version");
-
                 var version = await response.Content.ReadAsStringAsync();
 
                 response.EnsureSuccessStatusCode();
+
                 version.Should().Be(expectedVersion);
             }
         }
