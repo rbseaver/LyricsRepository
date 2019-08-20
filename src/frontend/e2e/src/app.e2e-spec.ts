@@ -1,5 +1,6 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
+import {} from 'jasmine';
 
 describe('workspace-project App', () => {
   let page: AppPage;
@@ -10,7 +11,9 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to frontend!');
+    page.getTitleText().then((t) => {
+      expect(t).toEqual('Welcome to frontend!');
+    });
   });
 
   afterEach(async () => {

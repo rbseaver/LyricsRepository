@@ -10,8 +10,8 @@
           "style": "scss"
         }
       },
-      "root": "",
-      "sourceRoot": "",
+      "root": "./",
+      "sourceRoot": "./",
       "prefix": "lr",
       "architect": {
         "build": {
@@ -119,5 +119,5 @@
         }
       }
     }},
-  "defaultProject": "frontend" 1
+  "defaultProject": "frontend"
 }
