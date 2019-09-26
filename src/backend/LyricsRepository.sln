@@ -11,21 +11,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsRepository.Core", "Ly
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LyricsRepository.Tests.Integration", "LyricsRepository.Tests.Integration\LyricsRepository.Tests.Integration.csproj", "{1DDB973A-0DF9-4B45-9B4F-E9B4DE2464F2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Settings", "Settings", "{769BC7A1-A6AB-4EC4-980D-9EF46C8E406D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Settings", "2. Settings", "{769BC7A1-A6AB-4EC4-980D-9EF46C8E406D}"
 	ProjectSection(SolutionItems) = preProject
 		.bettercodehub.yml = .bettercodehub.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{F2B43D6E-7666-4E8D-8147-63BBD8588C44}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Misc", "1. Misc", "{F2B43D6E-7666-4E8D-8147-63BBD8588C44}"
 	ProjectSection(SolutionItems) = preProject
 		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0C8A6FC6-C1BE-421C-91B6-E64E3DC01507}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6. Tests", "6. Tests", "{0C8A6FC6-C1BE-421C-91B6-E64E3DC01507}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{8259B2BA-A6B4-4E9A-8ADC-7A16F4392DD6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Web", "3. Web", "{8259B2BA-A6B4-4E9A-8ADC-7A16F4392DD6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain", "Domain", "{4A2FBF1E-EC91-4FBB-8986-72A687547C67}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Domain", "4. Domain", "{4A2FBF1E-EC91-4FBB-8986-72A687547C67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
