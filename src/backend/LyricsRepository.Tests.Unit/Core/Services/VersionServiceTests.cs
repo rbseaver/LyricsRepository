@@ -1,9 +1,9 @@
-﻿using FluentAssertions;
+﻿using System.Threading.Tasks;
+using FluentAssertions;
 using LyricsRepository.Api;
 using LyricsRepository.Core;
 using LyricsRepository.Core.Providers;
 using NUnit.Framework;
-using System.Threading.Tasks;
 
 namespace LyricsRepository.Tests.Unit.Core.Services
 {

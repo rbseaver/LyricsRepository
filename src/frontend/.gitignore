@@ -41,6 +41,7 @@ yarn-error.log
 testem.log
 /typings
 .angulardoc.json
+*.code-workspace
 
 # System Files
 .DS_Store

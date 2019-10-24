@@ -1,13 +1,15 @@
+import { VersionApiService } from './../api/version-api.service';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class VersionService {
 
-  constructor() { }
+  constructor(private versionApiService: VersionApiService) { }
 
-  getVersion(): string {
-    return '1.0.0.0';
+  getVersion(): Observable<string> {
+    return this.versionApiService.get();
   }
 }

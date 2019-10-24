@@ -4,10 +4,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { VersionComponent } from './version/version.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    VersionComponent
   ],
   imports: [
     BrowserModule,
