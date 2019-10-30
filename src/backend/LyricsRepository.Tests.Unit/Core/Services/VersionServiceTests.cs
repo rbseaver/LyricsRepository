@@ -3,6 +3,7 @@ using FluentAssertions;
 using LyricsRepository.Api;
 using LyricsRepository.Core;
 using LyricsRepository.Core.Providers;
+using LyricsRepository.Core.Services;
 using NUnit.Framework;
 
 namespace LyricsRepository.Tests.Unit.Core.Services

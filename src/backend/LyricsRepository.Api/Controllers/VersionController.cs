@@ -8,7 +8,7 @@ namespace LyricsRepository.Api.Controllers
     [ApiController]
     public class VersionController : ControllerBase
     {
-        private IVersionService versionService;
+        private readonly IVersionService versionService;
 
         public VersionController(IVersionService versionService)
         {

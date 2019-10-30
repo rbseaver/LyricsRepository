@@ -31,7 +31,7 @@ describe('VersionComponent', () => {
   });
 
   it('should set version', () => {
-    mockVersionService.getVersion.and.returnValue('1.0.0.1');
+    mockVersionService.getVersion.and.returnValue('1.0.0.0');
     fixture.detectChanges();
     expect(component.version).toBe('1.0.0.0');
   });

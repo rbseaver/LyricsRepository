@@ -1,5 +1,6 @@
 ﻿using LyricsRepository.Core;
 using LyricsRepository.Core.Providers;
+using LyricsRepository.Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;

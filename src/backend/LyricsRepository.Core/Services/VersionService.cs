@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace LyricsRepository.Core
+namespace LyricsRepository.Core.Services
 {
     public class VersionService : IVersionService
     {

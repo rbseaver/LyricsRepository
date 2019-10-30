@@ -1,4 +1,4 @@
-﻿namespace LyricsRepository.Core
+﻿namespace LyricsRepository.Core.Models
 {
     public class Song
     {
