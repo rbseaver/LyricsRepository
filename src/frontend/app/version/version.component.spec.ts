@@ -1,16 +1,15 @@
 import { VersionComponent } from './version.component';
 import { VersionService } from './version.service';
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
+import { of } from 'rxjs';
 
 describe('VersionComponent', () => {
   let component: VersionComponent;
-  let fixture: ComponentFixture<VersionComponent>;
   let mockVersionService;
 
   beforeEach(async(() => {
-    mockVersionService = jasmine.createSpyObj(['getVersion']);
+
     TestBed.configureTestingModule({
       declarations: [ VersionComponent ],
       providers: [
@@ -21,18 +20,15 @@ describe('VersionComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VersionComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    mockVersionService = jasmine.createSpyObj(['getVersion']);
+    component = new VersionComponent(mockVersionService);
   });
 
-  it('should create', () => {
-    expect(fixture.componentInstance).toBeTruthy();
-  });
+  it('should set version', async(() => {
+    mockVersionService.getVersion.and.returnValue(of('1.0.0.0'));
 
-  it('should set version', () => {
-    mockVersionService.getVersion.and.returnValue('1.0.0.0');
-    fixture.detectChanges();
+    component.ngOnInit();
+
     expect(component.version).toBe('1.0.0.0');
-  });
+  }));
 });

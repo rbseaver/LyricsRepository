@@ -12,8 +12,6 @@ export class VersionComponent implements OnInit {
   constructor(private versionService: VersionService) { }
 
   ngOnInit() {
-    this.versionService
-      .getVersion()
-      .subscribe(x => this.version = x);
+    this.versionService.getVersion().subscribe(x => this.version = x);
   }
 }
