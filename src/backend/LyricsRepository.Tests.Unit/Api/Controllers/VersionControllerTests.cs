@@ -1,26 +1,30 @@
-﻿using FluentAssertions;
+﻿using System.Threading.Tasks;
+using FluentAssertions;
 using LyricsRepository.Api;
 using LyricsRepository.Api.Controllers;
 using LyricsRepository.Core;
 using Moq;
 using NUnit.Framework;
-using System.Threading.Tasks;
 
 namespace LyricsRepository.Tests.Unit.Api.Controllers
 {
     [TestFixture]
-    public class VersionControllerTests
+    public class VersionControllerTests : TestBase
     {
         [Test]
         public async Task ShouldReturnVersion()
         {
-            var versionService = new Mock<IVersionService>();
-            versionService.Setup(x => x.GetVersionAsync<Startup>()).ReturnsAsync("1.0.0.0");
-            var controller = new VersionController(versionService.Object);
+            const string expected = "1.0.0.0";
+            Mock<IVersionService> versionService = Mocker.GetMock<IVersionService>();
+            versionService
+                .Setup(x => x.GetVersionAsync<Startup>())
+                .ReturnsAsync(expected);
+            var controller = Mocker.Create<VersionController>();
 
             var version = await controller.Get();
 
-            version.Should().Be("1.0.0.0");
+            versionService.Verify(x => x.GetVersionAsync<Startup>(), Times.Once);
+            version.Should().Be(expected);
         }
     }
 }

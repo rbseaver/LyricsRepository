@@ -10,7 +10,9 @@ describe('VersionService', () => {
   let service;
 
   beforeEach(() => {
-    mockVersionApiService = jasmine.createSpyObj(['get']);
+    mockVersionApiService = {
+      get: jest.fn()
+    };
     TestBed.configureTestingModule({
       providers:  [
         { provide: VersionApiService, useValue: mockVersionApiService }
@@ -24,8 +26,8 @@ describe('VersionService', () => {
   });
 
   it('should retrieve version', () => {
-    mockVersionApiService.get.and.returnValue(of('1.0.0.0'));
+    mockVersionApiService.get.mockReturnValue(of('1.0.0.0'));
 
-    service.getVersion().subscribe((result: string) => expect(result).toBe('1.0.0.0'));
+    service.getVersion().subscribe((result) => expect(result).toBe('1.0.0.0'));
   });
 });

@@ -1,5 +1,8 @@
 import { VersionService } from './version.service';
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-version',
@@ -7,11 +10,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./version.component.scss']
 })
 export class VersionComponent implements OnInit {
-  public version: string;
+  public DefaultVersion = '1.0.0.0';
+  public version: Observable<string>;
 
-  constructor(private versionService: VersionService) { }
+  constructor(private versionService: VersionService) {
+  }
 
-  ngOnInit() {
-    this.versionService.getVersion().subscribe(x => this.version = x);
+  ngOnInit(): void {
+    this.version = this.versionService
+      .getVersion()
+      .pipe(take(1));
   }
 }
